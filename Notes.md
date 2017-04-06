@@ -415,7 +415,7 @@ Cela nécessite d’avoir accès aux deux serveurs, depuis votre machine locale,
 De serveur à serveur en étant connecté à un serveur
 La commande est sensiblement la même, vous êtes connecté sur la machine où sont disponibles les fichiers.
 
-    scp -r -P chemin/vers/dossier/source user@serveur2:chemin/vers/dossier/destination
+    scp -r -P PORTS chemin/vers/dossier/source user@serveur2:chemin/vers/dossier/destination
 
 L’option -r indique la récursivité
 L’option -p préserve les dates de modification, d’accès, et les modes des anciens fichiers.
