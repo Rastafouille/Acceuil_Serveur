@@ -1,0 +1,1449 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>Notes</title></head><body><article class="markdown-body"><h1 id="ros"><a name="user-content-ros" href="#ros" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ROS</h1>
+<h2 id="installation"><a name="user-content-installation" href="#installation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation</h2>
+<p><a href="http://www.instructables.com/id/Ros-Indigo-install-on-Ubuntu-1/">http://www.instructables.com/id/Ros-Indigo-install-on-Ubuntu-1/</a></p>
+<p>j&rsquo;ai enregistrer lenvironnement dans Bashrc, mais a chaque shell<br />
+<code>source ~/.bashrc</code></p>
+<p>After you put the who rplidar_ros into the catkin_ws and compile, you will need to do one command to source the folder<br />
+<code>source ~/catkin_ws/devel/setup.bash</code></p>
+<p>Sourcer :</p>
+<pre><code>$ source devel/setup.bash
+</code></pre>
+<h2 id="rosbash-generation-robots"><a name="user-content-rosbash-generation-robots" href="#rosbash-generation-robots" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ROSBASH Generation Robots</h2>
+<p><code>git clone git@dev.humarobotics.com:rosbash</code><br />
+modifier <code>/home/"utilisateur"/.bashrc</code><br />
+ajouter: <code>source ~/rosbash/rosbash.bash</code><br />
+redémarrer les shells<br />
+<code>devel</code> pour initialiser<br />
+<code>rkill</code>, <code>rosrun</code>, <code>roslaunch</code></p>
+<h2 id="topics"><a name="user-content-topics" href="#topics" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Topics</h2>
+<p>Lors de la création d&rsquo;un <em>Publisher</em> ou <em>Subscriber</em>, il est possible (et même vivement conseillé depuis ROS Indigo) de spécifier la taille de la file (<em>queue</em>) avec le paramètre <code>queue_size</code>. Dans le cas du <em>Publisher</em>, cela dépend des latences de communication entre les noeuds, alors que pour le <em>Subscriber</em>, cela dépend du temps de traitement lors de la réception d&rsquo;un message. Une file trop grande pour le <em>Subscriber</em> peut engendrer des retards dans le traitement, mais garantit de traiter tous les messages. Dans le cas de capteurs publiant régulièrement leur état, une petite taille de file (1) paraît suffisant car garantit de toujours obtenir la dernière mesure. </p>
+<h3 id="frequence-et-bande-passante-dun-topic"><a name="user-content-frequence-et-bande-passante-dun-topic" href="#frequence-et-bande-passante-dun-topic" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fréquence et bande passante d&rsquo;un topic</h3>
+<p>La fréquence de publication d&rsquo;un topic (messages par seconde) peut être affichée avec la commande :</p>
+<pre><code>    $ rostopic hz topic-name
+</code></pre>
+<p>De même, la bande passante utilisée (en octets par seconde) est calculée avec la commande :</p>
+<pre><code>    $ rostopic bw topic-name
+</code></pre>
+<h2 id="autres-ros"><a name="user-content-autres-ros" href="#autres-ros" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Autres ROS</h2>
+<h3 id="verification-de-problemes"><a name="user-content-verification-de-problemes" href="#verification-de-problemes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Vérification de problèmes</h3>
+<p>La commande <code>roswtf</code> effectue tout un tas de tests pour vérifier la présence d&rsquo;éventuels problèmes.</p>
+<h2 id="services"><a name="user-content-services" href="#services" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Services</h2>
+<h3 id="ligne-de-commande"><a name="user-content-ligne-de-commande" href="#ligne-de-commande" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Ligne de commande</h3>
+<ul>
+<li>
+<p>Liste des services</p>
+<pre><code>$ rosservice list
+</code></pre>
+</li>
+<li>
+<p>Informations sur un service :</p>
+<pre><code>$ rosservice info /turtle1/teleport_absolute
+</code></pre>
+</li>
+<li>
+<p>Appel d&rsquo;un service sans arguments :</p>
+<pre><code>$ rosservice call /clear
+</code></pre>
+</li>
+<li>
+<p>Appel d&rsquo;un service avec arguments :</p>
+<pre><code>$ rosservice call /turtle1/teleport_absolute 5 5 0
+</code></pre>
+</li>
+</ul>
+<h3 id="python"><a name="user-content-python" href="#python" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python</h3>
+<p>Sans arguments :</p>
+<pre><code>from std_srvs.srv import Empty
+rospy.wait_for_service("/clear")
+clear = rospy.ServiceProxy("/clear", Empty)
+clear()
+</code></pre>
+<p>Avec des arguments :</p>
+<pre><code>from turtlesim.srv import TeleportAbsolute
+rospy.wait_for_service("/turtle1/teleport_absolute")
+teleport = rospy.ServiceProxy("/turtle1/teleport_absolute", TeleportAbsolute)
+teleport(5, 5, 0)
+</code></pre>
+<h3 id="creer-un-service"><a name="user-content-creer-un-service" href="#creer-un-service" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Créer un service</h3>
+<h4 id="fichier-srv"><a name="user-content-fichier-srv" href="#fichier-srv" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fichier srv</h4>
+<p>Créer un fichier <code>.srv</code> dans un dossier <code>srv</code> à la racine du paquet.</p>
+<pre><code>float32 x
+float32 x
+---
+</code></pre>
+<h4 id="cmakelists"><a name="user-content-cmakelists" href="#cmakelists" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CMakeLists</h4>
+<p>Il faut ajouter la dépendance à <code>genmsg</code> :</p>
+<pre><code>find_package(catkin REQUIRED COMPONENTS
+    [...]
+    genmsg
+)
+</code></pre>
+<p>Décommenter la partie sur les fichiers de service :</p>
+<pre><code>add_service_files(
+  FILES
+  Goal.srv
+)
+</code></pre>
+<p>Et la partie de génération des services :</p>
+<pre><code>generate_messages(
+   DEPENDENCIES
+   geometry_msgs
+   std_msgs
+)
+</code></pre>
+<h4 id="python_1"><a name="user-content-python_1" href="#python_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Python</h4>
+<p>Il faut commencer par importer notre nouveau service :</p>
+<pre><code>from turtle_goal import Goal, GoalRequest
+</code></pre>
+<p><em>Remarque : le <code>GoalRequest</code> est généré automatiquement.</em></p>
+<p>On crée le service à la manière d&rsquo;un subscriber :</p>
+<pre><code>self.service=rospy.Service("/turtle1/goal", Goal, self.cb_service)
+</code></pre>
+<p>Et maintenant, on implémente la fonction appelée par le service :</p>
+<pre><code>def cb_service(self, req):
+    self.go(req.x, req.y)
+    return GoalResponse()
+</code></pre>
+<p>On peut alors tester avec :</p>
+<pre><code>rosservice call /turtle1/goal 2 7
+</code></pre>
+<p>Attention, il faut gérer la concurrence des appels aux services nous-même.</p>
+<h2 id="outils-ros"><a name="user-content-outils-ros" href="#outils-ros" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Outils ROS</h2>
+<p>La gestion des paquets se fait avec <code>rospack</code>. Pour mettre à jour l&rsquo;index des paquets :</p>
+<pre><code>$ rospack profile
+</code></pre>
+<p>Déplacement dans le répertoire d&rsquo;un paquet :</p>
+<pre><code>$ roscd mon_paquet
+</code></pre>
+<p>CREATION MODELE </p>
+<p><code>.sdf</code> spécifique Gazebo et <code>.urdf</code> pour ROS mais Gazebo les gere aussi<br />
+créer dossier <code>tourelle_description</code><br />
+importer le <code>.stl</code> dedans<br />
+modifier avec blender, echelle, position, orientation, origine<br />
+pour echelle et orientaiton, modifier directement les parametres dans la table de droite<br />
+modife origine :<br />
+- en bas, edit mode<br />
+- touche &ldquo;C&rdquo; pour selection<br />
+- &ldquo;shift + S&rdquo; puis &ldquo;cursor to selected&rdquo;, le curseur se met sur le barycentre des points selectionnés<br />
+- en bas, objet mode<br />
+- &ldquo;origin to 3D cursor&rdquo;<br />
+- mettre position a 0 0 0<br />
+modif du zoom, tip &ldquo;N&rdquo; et passer le start clip a 0.001 dans la table de droite<br />
+file/export/STL pour enregister<br />
+si probleme d&rsquo;affichage dans meshlab : &ldquo;Normalize Face Normals&rdquo;</p>
+<h2 id="modele-dans-gazebo"><a name="user-content-modele-dans-gazebo" href="#modele-dans-gazebo" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>MODELE DANS GAZEBO</h2>
+<h3 id="urdf"><a name="user-content-urdf" href="#urdf" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>URDF</h3>
+<p>définition des links et joins dans le fichier URDF<br />
+visualisation URDF dans RVIZ pour validation de l&rsquo;assemblage<br />
+<code>roslaunch urdf_tutorial display.launch model:=tourelle.urdf gui:=true</code></p>
+<p>creer tourelle_gazebo.launch pour charger le world et le .urdf et le controleur (control.launch) :     <br />
+Exposer le model dans ROS : creation du fichier control.LAUNCH qui appelle un autre fichier de config .YAML<br />
+Ajouter les transmissions dans URDF<br />
+Créer les fichiers de contrôle:<br />
+- <code>tourelle_control.yaml</code><br />
+- <code>tourelle_control.launch</code></p>
+<h3 id="phantom-tourelle-avec-xacro"><a name="user-content-phantom-tourelle-avec-xacro" href="#phantom-tourelle-avec-xacro" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>PHANTOM + TOURELLE AVEC XACRO</h3>
+<p>xacro pour la generation automatique urdf ou la defetion de macro<br />
+il nous faut une xacro pour definir un macro de creation tourelle, une idem pour phantomX et une pour faire un urdf d&rsquo;assemblage.<br />
+On peut faire des xacro de creation urdf pour plusieurs types d&rsquo;assemblages, Tourelle+Baselink, PhantomX+Base link ou PhantomX+tourelle<br />
+pour lancer la generation de l&rsquo;urdf a partir du xacro : <code>rosrun xacro xacro phantomx.xacro &gt;phantomx.urdf</code></p>
+<h3 id="ajout-capteurs"><a name="user-content-ajout-capteurs" href="#ajout-capteurs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>AJOUT CAPTEURS</h3>
+<p>dans l&rsquo;URDF tag gazebo, en 2 parties, Sensor et plugin</p>
+<h6 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a></h6>
+<h1 id="git"><a name="user-content-git" href="#git" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>GIT</h1>
+<p>Pour le premier<br />
+<code>git init .</code><br />
+<code>git add *</code><br />
+<code>git commit</code> (<code>-a</code> pour pas faire le <code>git add *</code>)<br />
+<code>git remote add origin git@dev.humarobotics.com:tourelle_description</code> (apres un git clone pas besoin, il crée automatiquement un origin)<br />
+<code>git push origin master</code><br />
+pour push<br />
+<code>git add file</code> si nouveau fichier<br />
+<code>git commit</code><br />
+<code>git push origin master</code><br />
+pour pull<br />
+<code>git pull origin master</code><br />
+<code>git status</code> pour voir s&rsquo;il y a des modifs entre dernier pull ou commit avec tes modifs en cours, et de nouveaux fichiers<br />
+<code>git merge</code> pour comparer des modifs de ton commit avec un version en cours<br />
+<code>git diff</code> montrer les modif entre copie de travail et dernier commit<br />
+<code>git log</code> montre tout l&rsquo;historique des commit<br />
+dossier .git cacher avec tout de stocké<br />
+<code>git checkout xxxxx</code> pour charger un ancien commit et git chaeckout master pour recharger le dernier commit</p>
+<h2 id="annuler-les-modifications-non-committees"><a name="user-content-annuler-les-modifications-non-committees" href="#annuler-les-modifications-non-committees" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Annuler les modifications non committées</h2>
+<pre><code>$ git checkout -f
+</code></pre>
+<h2 id="interface-graphique"><a name="user-content-interface-graphique" href="#interface-graphique" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Interface graphique</h2>
+<p>gitk, gitg</p>
+<h2 id="proposer-des-modifications"><a name="user-content-proposer-des-modifications" href="#proposer-des-modifications" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>proposer des modifications</h2>
+<p>forker le repository dans son git depuis le git a modifier<br />
+faire les modifs et les pusher dans le repo forker<br />
+faire un pullrequest pour proposer la modif</p>
+<h2 id="fin-de-lignes"><a name="user-content-fin-de-lignes" href="#fin-de-lignes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fin de lignes</h2>
+<h3 id="reglage"><a name="user-content-reglage" href="#reglage" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Réglage</h3>
+<p>Pour configurer git afin qu&rsquo;il gère des fin de ligne à la mode UNIX :</p>
+<pre><code>$ git config --global core.autocrlf input
+</code></pre>
+<p>À la mode Windows :</p>
+<pre><code>$ git config --global core.autocrlf true
+</code></pre>
+<p>Source : <a href="https://help.github.com/articles/dealing-with-line-endings/">https://help.github.com/articles/dealing-with-line-endings/</a></p>
+<h3 id="probleme-avec-scripts-python"><a name="user-content-probleme-avec-scripts-python" href="#probleme-avec-scripts-python" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Problème avec scripts Python</h3>
+<p>Un mauvais réglage des fins de ligne peut conduire à des erreurs lors de l&rsquo;exécution de scripts Python.<br />
+En effet, lorsque l&rsquo;on lance un script comme un exécutable <code>./mon_script.py</code> ou par un fichier launch de ROS, c&rsquo;est la première ligne qui est lue, le <strong>hashbang</strong> :</p>
+<pre><code>#!/usr/bin/env python
+</code></pre>
+<p>Sous Linux, si le fichier est encodé avec des fins de ligne DOS, le <code>#</code> est mal lu, le script ne s&rsquo;exécute pas et la sortie est la suivante :</p>
+<pre><code>: No such file or directory
+</code></pre>
+<p>Source : <a href="http://stackoverflow.com/questions/19764710/python-script-gives-no-such-file-or-directory">http://stackoverflow.com/questions/19764710/python-script-gives-no-such-file-or-directory</a></p>
+<h2 id="quelques-commandes-utiles"><a name="user-content-quelques-commandes-utiles" href="#quelques-commandes-utiles" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Quelques commandes utiles</h2>
+<h3 id="comparer-deux-branches"><a name="user-content-comparer-deux-branches" href="#comparer-deux-branches" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Comparer deux branches</h3>
+<pre><code>$ git diff master..branche
+</code></pre>
+<h3 id="comparer-un-fichier-dans-deux-branches"><a name="user-content-comparer-un-fichier-dans-deux-branches" href="#comparer-un-fichier-dans-deux-branches" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Comparer un fichier dans deux branches</h3>
+<pre><code>$ git diff branche1 branche2 -- fichier.txt
+</code></pre>
+<p>Source : <a href="http://stackoverflow.com/questions/4099742/how-can-i-compare-files-from-two-different-branches">http://stackoverflow.com/questions/4099742/how-can-i-compare-files-from-two-different-branches</a></p>
+<h3 id="supprimer-une-branche"><a name="user-content-supprimer-une-branche" href="#supprimer-une-branche" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Supprimer une branche :</h3>
+<pre><code>$ git branch -d ma_branche
+</code></pre>
+<p>Source : <a href="http://makandracards.com/makandra/621-git-delete-a-branch-local-or-remote">http://makandracards.com/makandra/621-git-delete-a-branch-local-or-remote</a></p>
+<h3 id="obtenir-les-branches-distantes-localement"><a name="user-content-obtenir-les-branches-distantes-localement" href="#obtenir-les-branches-distantes-localement" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Obtenir les branches distantes localement</h3>
+<p>Suite au clonage d&rsquo;un répertoire, les branches sont bien rapatriées, mais compresées. Pour lister toutes les branches :</p>
+<pre><code>$ git branch -a
+</code></pre>
+<p>Pour obtenir la version locale d&rsquo;une branche présente sur <code>origin</code> :</p>
+<pre><code>$ git checkout -b ma_branche origin/mas_branche
+</code></pre>
+<p>Source : <a href="http://stackoverflow.com/questions/67699/clone-all-remote-branches-with-git">http://stackoverflow.com/questions/67699/clone-all-remote-branches-with-git</a></p>
+<h2 id="insertion-dun-depot-git-dans-un-nouveau-avec-conservation-de-lhistorique"><a name="user-content-insertion-dun-depot-git-dans-un-nouveau-avec-conservation-de-lhistorique" href="#insertion-dun-depot-git-dans-un-nouveau-avec-conservation-de-lhistorique" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Insertion d&rsquo;un depot Git dans un nouveau avec conservation de l&rsquo;historique</h2>
+<p>Le module Kinematics (repris de Martin) a été développé dans <code>Documents/gitPython</code>, puis, il a été déplacé dans le paquet ROS dans le workspace catkin. Le problème, c&rsquo;est que copier-coller le fichier manuellement supprime tout l&rsquo;historique git. Pour éviter cela, le principe est d&rsquo;ajouter l&rsquo;ancien dépôt comme source du nouveau dans une nouvelle branche puis fusionner cette nouvelle branche avec l&rsquo;ancienne.</p>
+<pre><code>    git remote add other ~/Documents/gitPython
+    git fetch other
+    git checkout -b newBranch other/master
+    git mv Kinematics.py scripts
+    git commit -m "Ajout du module Kinematics."
+    git checkout master
+    git merge newBranch
+    git commit
+    git remote rm other
+    git branch -d newBranch
+</code></pre>
+<p><em>Remarque : petit soucis avec un double .gitignore lors du merge.</em></p>
+<p>Source : <a href="http://stackoverflow.com/questions/1683531/how-to-import-existing-git-repository-into-another">http://stackoverflow.com/questions/1683531/how-to-import-existing-git-repository-into-another</a></p>
+<h6 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a></h6>
+<h1 id="sublime-text"><a name="user-content-sublime-text" href="#sublime-text" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sublime Text</h1>
+<h2 id="installation_1"><a name="user-content-installation_1" href="#installation_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation</h2>
+<pre><code>sudo add-apt-repository ppa:webupd8team/sublime-text-3
+sudo apt-get update
+sudo apt-get install sublime-text-installer
+</code></pre>
+<h2 id="package-control"><a name="user-content-package-control" href="#package-control" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Package Control</h2>
+<p>Dans View / Show Console :</p>
+<pre><code>import urllib.request,os,hashlib; 
+h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; 
+pf = 'Package Control.sublime-package'; 
+ipp = sublime.installed_packages_path(); 
+urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); 
+by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); 
+dh = hashlib.sha256(by).hexdigest(); 
+print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+</code></pre>
+<h6 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a></h6>
+<h1 id="markdown"><a name="user-content-markdown" href="#markdown" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>MarkDown</h1>
+<p>Dans Tools / Command Palette :</p>
+<pre><code>install package
+</code></pre>
+<p>Puis installer :</p>
+<pre><code>Markdown Preview
+Markdown extended
+Monokai extended
+</code></pre>
+<h2 id="conversion-markdown-html-sous-windows"><a name="user-content-conversion-markdown-html-sous-windows" href="#conversion-markdown-html-sous-windows" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Conversion Markdown-Html sous Windows</h2>
+<h3 id="avec-python-markdown"><a name="user-content-avec-python-markdown" href="#avec-python-markdown" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Avec python-markdown</h3>
+<h4 id="installation_2"><a name="user-content-installation_2" href="#installation_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation</h4>
+<p>La distribution Python Anaconda étant installé sur le poste, il est possible d&rsquo;installer <a href="https://pypi.python.org/pypi/Markdown">python-markdown</a> en lançant le prompt Anaconda puis :</p>
+<pre><code>    pip install markdown
+</code></pre>
+<p>Une fois installée, elle est assez simple d&rsquo;utilisation et <a href="http://pythonhosted.org//Markdown/index.html">bien documentée</a>.</p>
+<h4 id="utilisation"><a name="user-content-utilisation" href="#utilisation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Utilisation</h4>
+<p>Pour convertir un fichier Markdown en Html, se placer dans le dossier du fichier, maintenir la touche <code>Maj.</code> enfoncée en faisant un clic droit. Choisir alors &ldquo;Ouvrir une fenêtre de commande ici&rdquo;. Il ne reste plus qu&rsquo;à écrire :</p>
+<pre><code>    markdown_py nom_du_fichier_source.md &gt; nom_du_fichier_de_sortie.html
+</code></pre>
+<p>Attention, il y a des soucis d&rsquo;encodage avec l&rsquo;unicode. Dans le navigateur, changer l&rsquo;encodage pour utf-8.</p>
+<h4 id="utiliser-lextension-toc"><a name="user-content-utiliser-lextension-toc" href="#utiliser-lextension-toc" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Utiliser l&rsquo;extension TOC</h4>
+<p>Pour afficher une table des matières, on peut utiliser l&rsquo;<a href="http://pythonhosted.org//Markdown/extensions/toc.html">extension TOC</a> incluse dans python-markdown.</p>
+<p>Pour cela, il suffit de placer <code>[TOC]</code> à l&rsquo;endroit du fichier où l&rsquo;on souhaite afficher la table des matières.</p>
+<p>Pour générer le fichier Html, il faut alors spécifier l&rsquo;utilisation de l&rsquo;extension, dans ce cas, on utilise un autre syntaxe :</p>
+<pre><code>    python -m markdown -x markdown.extensions.toc notes_romain.md &gt; notes_romain.html
+</code></pre>
+<h3 id="avec-grip"><a name="user-content-avec-grip" href="#avec-grip" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Avec grip</h3>
+<p>Une autre solution est <a href="https://github.com/joeyespo/grip">grip</a>. Il permet de rendre les pages avec le CSS de Github (et de prendre en compte la syntaxe Markdown de Github).</p>
+<h4 id="installation_3"><a name="user-content-installation_3" href="#installation_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation</h4>
+<p>Simplement avec <code>pip</code></p>
+<pre><code>    pip install grip
+</code></pre>
+<h4 id="utilisation_1"><a name="user-content-utilisation_1" href="#utilisation_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Utilisation</h4>
+<p>Pour exporter le fichier localement dans un fichier Html :</p>
+<pre><code>    grip fichier_source.md --export ficher_de_destination.html
+</code></pre>
+<h2 id="ascii-art-dans-sublime-text"><a name="user-content-ascii-art-dans-sublime-text" href="#ascii-art-dans-sublime-text" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Ascii art dans Sublime Text</h2>
+<p>Utilisation du plugin <a href="https://github.com/viisual/ASCII-Decorator">Ascii Decoration</a> disponible dans le Package Control.</p>
+<h2 id="dictionnaire-francais-dans-sublime-text"><a name="user-content-dictionnaire-francais-dans-sublime-text" href="#dictionnaire-francais-dans-sublime-text" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dictionnaire français dans Sublime Text</h2>
+<ul>
+<li>Clôner le dépôt Github : <a href="https://github.com/titoBouzout/Dictionaries">https://github.com/titoBouzout/Dictionaries</a></li>
+<li>Copier les fichiers <code>French.aff</code> et <code>French.dic</code> dans un nouveau paquet de Sublime Text dans <code>~/.config/sublime-text-2/Packages/User/Language-French</code></li>
+<li>Activer la vérification avec <code>&lt;F6&gt;</code> et choisir la langue dans le menu <code>View -&gt; Dictionnary</code>.</li>
+</ul>
+<p>Source : <a href="http://blog.smarchal.com/correcteur-orthographique-francais-sublime-text/">http://blog.smarchal.com/correcteur-orthographique-francais-sublime-text/</a></p>
+<h6 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a></h6>
+<h1 id="serveur-apache2"><a name="user-content-serveur-apache2" href="#serveur-apache2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Serveur Apache2</h1>
+<h6 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a></h6>
+<h1 id="ssh"><a name="user-content-ssh" href="#ssh" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SSH</h1>
+<h2 id="connexion-ssh-sans-mot-de-passe"><a name="user-content-connexion-ssh-sans-mot-de-passe" href="#connexion-ssh-sans-mot-de-passe" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Connexion SSH sans mot de passe</h2>
+<p>Afin de se connecter au pcDuino en SSH sans qu&rsquo;il nous demande à chaque fois le mot de passe, il faut configurer le SSH. Il faut donc avoir un jeu de clés sur le PC fixe (supposé vu qu&rsquo;on utilise Git). Ensuite, il faut ajouter notre clé publique dans les clés autorisées du pcDuino :</p>
+<pre><code>$ cat ~/.ssh/id_rsa.pub | ssh ubuntu@192.168.0.102 'cat &gt;&gt; .ssh/authorized_keys'
+</code></pre>
+<p>Sur le PC fixe, la passphrase de la clé SSH sera demandée à chaque fois. Pour éviter cela, on utilise le gestionnaire de mots de passe <strong>Gnome Keyring</strong>.</p>
+<h2 id="connexion-ssh-avec-x11-forwarding"><a name="user-content-connexion-ssh-avec-x11-forwarding" href="#connexion-ssh-avec-x11-forwarding" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Connexion SSH avec X11 forwarding</h2>
+<p>Le problème de la connexion SSH, c&rsquo;est que l&rsquo;on ne peut exécuter que des programmes en ligne de commande et non des utilitaires avec des interfaces graphiques. C&rsquo;est en fait possible avec la méthode du X11 forwarding. Cela consiste à rediriger les flux X11 donc graphiques sur la machine de l&rsquo;utilisateur. Pour cela, il suffit de lancer la connexion SSH avec l&rsquo;option <code>-Y</code> :</p>
+<pre><code>ssh -Y utilisateur@adresse_ip
+</code></pre>
+<p>En réalité, le X11 forwarding s&rsquo;utilise avec l&rsquo;option <code>-X</code> mais cette connexion est soumise à des règles de sécurité qui sont évitées avec <code>-Y</code>, ce qui suffit pour un connexion locale.</p>
+<p><em>EDIT : pas forcement utile :</em></p>
+<p>Pour utiliser le X11 forwarding dans GNU Screen, il faut reporter la valeur de la variable d&rsquo;environnement <code>DISPLAY</code>. Pour cela, suite à la connexion SSH avec X11 forwarding, afficher la valeur de cette variable :</p>
+<pre><code>echo $DISPLAY
+</code></pre>
+<p>Noter cette valeur et lancer Gnu Screen :</p>
+<pre><code>screen
+</code></pre>
+<p>Dans chaque terminal de Gnu Screen, exporter la variable <code>DISPLAY</code> avec la valeur notée précédemment :</p>
+<pre><code>export DISPLAY=localhost:10.0
+</code></pre>
+<h6 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a></h6>
+<h1 id="autres"><a name="user-content-autres" href="#autres" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Autres</h1>
+<h2 id="clavier-numerique-au-demarrage"><a name="user-content-clavier-numerique-au-demarrage" href="#clavier-numerique-au-demarrage" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Clavier numerique au demarrage</h2>
+<p>créer un fichier (s&rsquo;il n&rsquo;existe pas) <code>/etc/lightdm/lightdm.conf.d/20-lubuntu.conf</code><br />
+et y mettre :</p>
+<pre><code>[SeatDefaults]
+greeter-setup-script=/usr/bin/numlockx on
+</code></pre>
+<p>source : <a href="http://doc.ubuntu-fr.org/numlockx">http://doc.ubuntu-fr.org/numlockx</a><br />
+il faut prélablement avoir installer numlockx en apt-get</p>
+<h2 id="changer-message-daccueil-ubuntu"><a name="user-content-changer-message-daccueil-ubuntu" href="#changer-message-daccueil-ubuntu" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Changer message d&rsquo;accueil ubuntu</h2>
+<p>Il s&rsquo;agit du message informatif afficher au début d&rsquo;une connexion SSh par exemple.</p>
+<p>Créer le fichier <code>/etc/motd.tail</code> et y inscrire le message souhaité.</p>
+<p>Exemple :</p>
+<pre><code>    * Penser a regler la date.
+         - Manuellement :
+                 sudo date MMJJHHmmAAAA
+         - Ou plus precisement :
+                 sudo ntpdate 192.168.0.103
+</code></pre>
+<p>Source : <a href="http://serverfault.com/questions/407033/how-can-i-edit-the-welcome-message-when-ssh-start">http://serverfault.com/questions/407033/how-can-i-edit-the-welcome-message-when-ssh-start</a></p>
+<h2 id="recherche-de-fichiers"><a name="user-content-recherche-de-fichiers" href="#recherche-de-fichiers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Recherche de fichiers</h2>
+<p>Recherche de tous les fichiers Python dans le répertoire courant :</p>
+<pre><code>find . -name "*.py"
+</code></pre>
+<h2 id="processus"><a name="user-content-processus" href="#processus" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Processus</h2>
+<p>La liste des processus lancés par l&rsquo;utilisateur dans le terminal :</p>
+<pre><code>ps -a
+</code></pre>
+<p>Tuer un processus avec son <code>pid</code> :</p>
+<pre><code>kill -9 pid
+</code></pre>
+<h2 id="wiimote-bluetooth"><a name="user-content-wiimote-bluetooth" href="#wiimote-bluetooth" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Wiimote bluetooth</h2>
+<p><a href="http://www.raspberrypi-spy.co.uk/2013/02/nintendo-wii-remote-python-and-the-raspberry-pi/">http://www.raspberrypi-spy.co.uk/2013/02/nintendo-wii-remote-python-and-the-raspberry-pi/</a><br />
+<a href="http://linux.arcticdesign.fr/commande-bluetooth-laide-du-pyhton/">http://linux.arcticdesign.fr/commande-bluetooth-laide-du-pyhton/</a></p>
+<p>pour activer le bluetooth sur le pc H@ri, a chaque connexion du dongle :<br />
+<code>sudo hciconfig hci0 reset</code></p>
+<h2 id="la-date-sur-le-pcduino"><a name="user-content-la-date-sur-le-pcduino" href="#la-date-sur-le-pcduino" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>La date sur le pcDuino</h2>
+<p>Le pcDuino ne dispose pas de module horloge RTC (Real Time Clock) avec une pile permettant de conserver l&rsquo;information de date.</p>
+<p>Il se connecte alors à un serveur NTP lorsqu&rsquo;il est conecté à internet. Mais sur le robot, il n&rsquo;a pas accès à internet, il conserve alors une date par défaut (janvier 2010) mais cela pose problème à ROS qui utilise la date à de nombreuses reprises (logs&hellip;).</p>
+<h3 id="ntpdate"><a name="user-content-ntpdate" href="#ntpdate" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ntpdate</h3>
+<p>La façon la plus fiable est d&rsquo;utiliser <code>ntpdate</code> pour récupérer la date d&rsquo;un ordianteur distant.</p>
+<ul>
+<li>
+<p>Installer <code>ntpdate</code> sur les deux PC :</p>
+<pre><code>        $ sudo apt-get install ntpdate
+</code></pre>
+</li>
+<li>
+<p>Installer <strong>en plus</strong> <code>ntp</code> sur le PC fixe :</p>
+<pre><code>        $ sudo apt-get install ntpdate ntp
+</code></pre>
+</li>
+<li>
+<p>Ensuite il suffit de lancer la commande suivante après le démarrage sur le pcDuinop :</p>
+<pre><code>        $ sudo ntpdate adresse.ip.pc.fixe.
+</code></pre>
+</li>
+</ul>
+<h3 id="en-ssh"><a name="user-content-en-ssh" href="#en-ssh" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>En SSH</h3>
+<p>Une solution est d&rsquo;utiliser la date du PC fixe et l&rsquo;envoyer par SSH. Pour cela, il faut être connecté sur le pcDuino et établir une connexion SSH vers le PC fixe qui doit donc avoir un serveur SSH opérationnel.</p>
+<pre><code>$ sudo date --set="$(ssh user@server 'date -u')"
+</code></pre>
+<p>Source : <a href="http://www.commandlinefu.com/commands/view/9153/synchronize-date-and-time-with-a-server-over-ssh">http://www.commandlinefu.com/commands/view/9153/synchronize-date-and-time-with-a-server-over-ssh</a></p>
+<h3 id="manuellement"><a name="user-content-manuellement" href="#manuellement" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Manuellement</h3>
+<p>Régler la date manuellement avec le format : &ldquo;MMJJHHmmYYYY&rdquo; :</p>
+<pre><code>$ sudo date 071412302006
+</code></pre>
+<p>Source : <a href="http://www.aide-ubuntu.com/date-visualiser-et-modifier-la">http://www.aide-ubuntu.com/date-visualiser-et-modifier-la</a></p>
+<h6 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a></h6>
+<h1 id="scite"><a name="user-content-scite" href="#scite" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SCITE</h1>
+<h2 id="general-configuration"><a name="user-content-general-configuration" href="#general-configuration" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>GENERAL CONFIGURATION</h2>
+<pre><code>tabsize=4
+indent.size=4
+use.tabs=0
+
+# open files in the last directory:
+open.dialog.in.file.directory=1
+check.if.already.open=1
+
+# show all files:
+open.filter=$(all.files)Source Files (cpp,c,h,mak)|*.cpp;*.c;*.h;*.mak;makefile|Web Files (htm, html, css, xml, shtml, js, pl, asp)|*.html;*.htm;*.css;*.shtml;*.js;*.pl;*.xml;*.asp|Text (txt, doc)|*.txt;*.doc|
+
+# show status bar:
+statusbar.visible=1
+title.full.path=1
+line.margin.visible=1
+
+# Set monospaced font:
+font.base=$(font.monospace)
+font.small=$(font.monospace)
+font.comment=$(font.monospace)
+font.text=$(font.monospace)
+font.text.comment=$(font.monospace)
+font.embedded.base=$(font.monospace)
+font.embedded.comment=$(font.monospace)
+font.vbs=$(font.monospace)
+
+# Wrapping of long lines
+wrap=1
+
+# prompt me for any suspicous action
+are.you.sure.on.reload=1
+load.on.activate=1
+highlight.current.word=1
+#highlight.current.word.by.style=1
+highlight.current.word.colour=#00D040
+selection.back=#F00000
+command.go.*.py=python -u "$(FileNameExt)" $(1)
+file.patterns.cpp=$(file.patterns.cpp);*.nxc;*.cpp;*.h;*.cc
+</code></pre></article></body></html>
