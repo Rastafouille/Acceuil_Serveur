@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Bridge</title>
+
+
+ <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=2.0, user-scalable=yes">
+  <link rel="stylesheet" href="jquery.mobile-1.0.min.css" />
+  <link rel="stylesheet" href="parametre.css" />
+  <script src="jquery-1.6.4.min.js"></script>
+  <script src="jquery.mobile-1.0.min.js"></script>
+ 
+
+<script>
+
+function checkRest()
+{
+  var xmlhttp;
+  if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  }
+  else
+  {// code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function()
+  {
+    if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+      document.getElementById("on").disabled=(xmlhttp.responseText.substr(xmlhttp.responseText.length - 3,1)=='1');
+      document.getElementById("off").disabled=(xmlhttp.responseText.substr(xmlhttp.responseText.length - 3,1)=='0');
+    }
+  }
+  //url="/arduino/analog/"+document.getElementById("pin").value;
+  xmlhttp.open("GET",url,true);
+  xmlhttp.send();
+}
+
+window.onload = function (){
+       setInterval("refresh()", 100);
+}
+
+
+</script>
+</head>
+<body onload="checkRest()">
+<center>
+
+<b><a href="owncloud/index.html"><img src="owncloud_logo.png" height=200 ></a><br/> 
+<br>
+<b><a href="ZumoYunHTML/index.html"><img src="robot_logo.png" height=300 ></a><br/>
+
+
+</body>
+</center>
+</html>
